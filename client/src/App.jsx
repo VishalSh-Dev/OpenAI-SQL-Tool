@@ -3,11 +3,11 @@ import sqlLogo from "./assets/sql.png";
 import { useState } from "react";
 
 function App() {
-  const [query, setquery] = useState("")
+  const [query, setquery] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(query);
-  }
+  };
   return (
     <main className={styles.body}>
       <img src={sqlLogo} alt="" className={styles.icon} />
@@ -16,9 +16,9 @@ function App() {
         <input
           type="text"
           name="query-description"
-          placeholder="Describe your query"
+          placeholder="Describe your query.."
           className={styles.input}
-          onChange={(e)=> setquery(e.target.value)}
+          onChange={(e) => setquery(e.target.value)}
         />
         <input type="submit" value="Generate query" className={styles.button} />
       </form>
