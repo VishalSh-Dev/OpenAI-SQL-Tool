@@ -24,13 +24,26 @@
   align-items: center;
   padding-top: 60px;
 }
-
-.icon {
-  width: 60px;
+.heading {
+  height: 6em;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 0.5rem;
 }
+.icon {
+  width: 6em;
 
+  /* object-fit: cover; */
+}
 .h3 {
-  font-size: 35px;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: #202123;
+  text-transform: uppercase;
+}
+.h2 {
+  font-size: 1.5em;
   font-weight: bold;
   color: #202123;
   margin: 16px 0 40px;

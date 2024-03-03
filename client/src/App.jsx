@@ -11,7 +11,7 @@ function App() {
     setAns(sqlQuery);
   };
   const generateQuery = async () => {
-    const result = await fetch("http://localhost:3005/generate", {
+    const result = await fetch("http://localhost:5500/generate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,8 +24,11 @@ function App() {
   };
   return (
     <main className={styles.body}>
-      <img src={sqlLogo} alt="" className={styles.icon} />
-      <h3 className={styles.h3}>Generate SQL with AI</h3>
+      <div className={styles.heading}>
+        <img src={sqlLogo} alt="" className={styles.icon} />
+        <h3 className={styles.h3}>Wizard</h3>
+      </div>
+      <h2 className={styles.h2}>Generate SQL with AI</h2>
       <form onSubmit={onSubmit} className={styles.form}>
         <input
           type="text"
