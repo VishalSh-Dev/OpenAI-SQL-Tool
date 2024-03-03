@@ -4,9 +4,23 @@ import { useState } from "react";
 
 function App() {
   const [query, setquery] = useState("");
-  const onSubmit = (e) => {
+  const [ans, setAns] = useState("");
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(query);
+    const sqlQuery = await generateQuery();
+    setAns(sqlQuery);
+  };
+  const generateQuery = async () => {
+    const result = await fetch("http://localhost:3005/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query: query }),
+    });
+
+    const data = await result.json();
+    return data.response.trim();
   };
   return (
     <main className={styles.body}>
@@ -22,6 +36,7 @@ function App() {
         />
         <input type="submit" value="Generate query" className={styles.button} />
       </form>
+      <pre className={styles.pre}>{ans}</pre>
     </main>
   );
 }
