@@ -1,6 +1,6 @@
 # SQL-Wizard - SQL Query Converter
 
-![Alt text](/client/src/assets/Screenshot 2024-03-06 at 7.55.55 PM.jpg?raw=true "Screenshot")
+![Alt text](r'client/src/assets/Screenshot 2024-03-06 at 7.55.55 PM.jpg'?raw=true "Screenshot")
 
 This is a full stack app that converts natural language English to SQL queries using OpenAI's GPT-3.5 architecture and text completion API. The app has a client and a server, each with its own npm packages. 
 
